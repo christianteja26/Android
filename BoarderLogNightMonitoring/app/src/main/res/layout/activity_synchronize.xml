@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgPrimary"
+    tools:context="id.ac.binus.boarderlognightmonitoring.TapingActivity"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/blnm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_tittle"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/defaultMargin"
+        android:background="@color/bgPrimary">
+        <TextView
+            android:id="@+id/lblTime"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="@dimen/defaultMargin"
+        android:id="@+id/content"
+        android:background="@color/bgPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:padding="@dimen/defaultMargin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btnMonitoring"
+                android:layout_width="@dimen/btn_width_normal"
+                android:layout_height="@dimen/btn_height_normal"
+                android:text="@string/btn_monitoring"
+                android:textColor="@color/btnSubmit"
+                android:background="@drawable/btn_background"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:padding="@dimen/defaultMargin"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnSync"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="@string/btn_sync"
+                android:textColor="@color/btnSubmit"
+                android:background="@drawable/btn_background" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="defaultMargin">16dp</dimen>
+    <dimen name="large_text_size">48sp</dimen>
+    <dimen name="binusian_margin">12dp</dimen>
+    <dimen name="normal_text_size">20sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="btn_width_normal">100dp</dimen>
+    <dimen name="btn_height_normal">50dp</dimen>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgPrimary"
+    tools:context="id.ac.binus.boarderlognightmonitoring.TapingActivity"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/blnm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_tittle"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/defaultMargin"
+        android:background="@color/bgPrimary">
+        <TextView
+            android:id="@+id/lblTime"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="@dimen/defaultMargin"
+        android:id="@+id/content"
+        android:background="@color/bgPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblNIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_nim"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/normal_text_size" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/tapingPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/photo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintVertical_bias="0.0" />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="@dimen/defaultMargin"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtNIM"
+                    android:textSize="@dimen/normal_text_size"
+                    android:background="@drawable/edittext"
+                    android:textColor="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:maxLines="10"
+                    android:scrollbars="none"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"/>
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="14pt"
+                    android:layout_height="14pt"
+                    android:layout_centerVertical="true"
+                    android:layout_alignRight="@+id/txtNIM"
+                    android:background="@drawable/reset" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btnOut"
+                    android:textColor="@color/btnSubmit"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/btn_width_normal"
+                    android:layout_height="@dimen/btn_height_normal"
+                    android:layout_marginLeft="100dp"
+                    android:background="@drawable/btn_background"
+                    android:text="@string/btn_out" />
+
+                <Button
+                    android:id="@+id/btnIn"
+                    android:textColor="@color/btnSubmit"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/btn_width_normal"
+                    android:layout_height="@dimen/btn_height_normal"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="100dp"
+                    android:background="@drawable/btn_background"
+                    android:text="@string/btn_in" />
+
+                <Button
+                    android:id="@+id/btnHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/binusian_margin"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
